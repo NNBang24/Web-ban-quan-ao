@@ -1,3 +1,4 @@
+/* trang 1 index */
 .header-main img {
     width: 6rem;
     height: 6rem;
@@ -167,7 +168,7 @@
 }
 .product-shirt-main {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 5rem 3rem;
     margin-bottom: 3rem;
 
@@ -456,11 +457,35 @@ footer{
     position: relative;
 }
 
-/* .img-banner-overlod-input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 1;
-} */
+
+/* Product trang 2  */
+.product-shirt-main-page {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem 3rem;
+    margin-bottom: 3rem;
+
+}
+.dropdown-product{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.main-product {
+    margin-top: 10rem;
+
+}
+.search-dorp{
+    padding-left: 2rem;
+}
+.input-drop {
+    width: 20rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
+#select-drop{
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
