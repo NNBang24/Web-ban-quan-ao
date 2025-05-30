@@ -66,23 +66,6 @@ function changeImage (){
 }
 setInterval(changeImage ,3000);
 /////
-const productList = document.getElementById('product-list');
 
-products.forEach(product => {
-  const saleTag = product.tags && product.tags.includes('sale') ? `<div class="sale">SALE</div>` : '';
-  const productHTML = `
-    <div class="product-main">
-      <div class="img_hidden">
-        <a href="#" class="img_box">
-          <img src="${product.imageURL}" alt="${product.name}" />
-          <div class="product_overlay"></div>
-          ${saleTag}
-        </a>
-      </div>
-      <a href="#" class="product_name">${product.name}</a>
-      <p>${product.price.toLocaleString('vi-VN')}đ</p>
-    </div>
-  `;
-  productList.innerHTML += productHTML;
-});
+
 
