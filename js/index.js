@@ -16,9 +16,7 @@ const openInputFind = document.querySelector(".input-find");
 openPopup.addEventListener("click", () => {
   navigationPopup.classList.add("navigation-popup--open");
 });
-openPopup.addEventListener('blur',() => {
-navigationPopup.classList.remove("navigation-popup--open");
-} )
+
 closePopup.addEventListener("click", () => {
   navigationPopup.classList.remove("navigation-popup--open");
 });
@@ -98,19 +96,8 @@ function renderProduct ( start , end) {
 renderProduct(0,currenDisplay)
 // renderProduct(currenDisplay, products.length);
 
-
-
-
-
 loadMoreBtn.addEventListener("click", () => {
   renderProduct(currenDisplay, products.length);
   loadMoreBtn.classList.add('hidden')
   
 });
-
-// clcik mat thanh tim kiem 
-// const bodyElClcik = document.querySelector('.body-click');
-const openInputDelete = document.querySelector('.open-input');
-openInputDelete.addEventListener('blur' ,() =>{
-
-})
