@@ -506,3 +506,27 @@ footer {
   .active {
     background-color: #e6e6f0;
   }
+  .load-more{
+    text-align: center;
+    /* width: 10rem; */
+    
+  }
+  .load-more button {
+    width: 20rem;
+    font-size: 1.7rem;
+    margin: 2rem;
+    height: 3rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 1rem;
+    color: #878787;
+     transition: color 0.3s ease , background-color 0.3 ease;
+  }
+  .load-more button:hover {
+    color: #000;
+    background-color:#f0f0f0;
+  
+  }
+  .hidden{
+    display: none;
+  }
