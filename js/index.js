@@ -64,6 +64,48 @@ function changeImage (){
   });
 }
 setInterval(changeImage ,3000);
+
+// click chuyeen tiep
+  const navigationLeftButton =() =>{
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = imagesList.length - 1;
+    }
+    imgElement.src = imagesList[currentIndex];
+    const indexItems = document.querySelectorAll('.index-item')
+    indexItems.forEach((item , index) => {
+      if (index === currentIndex) {
+        item.classList.add('active')
+      }
+      else{
+        item.classList.remove('active')
+      }
+    });
+
+}
+const navigationRightButton =() =>{
+  currentIndex++;
+  if (currentIndex >= imagesList.length) {
+    currentIndex = 0;
+  }
+  imgElement.src = imagesList[currentIndex];
+  const indexItems = document.querySelectorAll('.index-item')
+  indexItems.forEach((item , index) => {
+    if (index === currentIndex) {
+      item.classList.add('active')
+    }
+    else{
+      item.classList.remove('active')
+    }
+  });
+
+}
+const navigationLeft = document.querySelector('.navigation-left');
+navigationLeft.addEventListener('click' ,navigationLeftButton)
+const navigationRight = document.querySelector('.navigation-right');
+navigationRight.addEventListener('click' ,navigationRightButton)
+
+
 // hiển thị thêm sản phẩm 
 
 
