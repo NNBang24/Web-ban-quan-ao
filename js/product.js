@@ -47,86 +47,22 @@ closeInputFind.addEventListener('blur', () => {
   closeInputFind.classList.add('hidden')
 });
   
-// 
-// silde-show images 
 
-
-let currentIndex = 0;
-const imgElement = document.querySelector('.img-slideshow');
-function changeImage() {
-  currentIndex++;
-  if (currentIndex >= imagesList.length) {
-    currentIndex = 0
-  }
-  imgElement.src = imagesList[currentIndex];
-  const indexItems = document.querySelectorAll('.index-item')
-  indexItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add('active')
-    }
-    else {
-      item.classList.remove('active')
-    }
-  });
-}
-setInterval(changeImage, 3000);
-
-// click chuyeen tiep
-const navigationLeftButton = () => {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = imagesList.length - 1;
-  }
-  imgElement.src = imagesList[currentIndex];
-  const indexItems = document.querySelectorAll('.index-item')
-  indexItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add('active')
-    }
-    else {
-      item.classList.remove('active')
-    }
-  });
-
-}
-const navigationRightButton = () => {
-  currentIndex++;
-  if (currentIndex >= imagesList.length) {
-    currentIndex = 0;
-  }
-  imgElement.src = imagesList[currentIndex];
-  const indexItems = document.querySelectorAll('.index-item')
-  indexItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add('active')
-    }
-    else {
-      item.classList.remove('active')
-    }
-  });
-
-}
-const navigationLeft = document.querySelector('.navigation-left');
-navigationLeft.addEventListener('click', navigationLeftButton)
-const navigationRight = document.querySelector('.navigation-right');
-navigationRight.addEventListener('click', navigationRightButton)
 
 
 // hiển thị thêm sản phẩm 
 
 
 const loadMoreBtn = document.querySelector('#load-more-btn');
-const productMainShirt = document.querySelector('.product-shirt-main')
-// const productMainShirtPage = document.querySelector('.product-shirt-main-page')
-let currenDisplay = 6;
+const productMainShirtPage = document.querySelector('.product-shirt-main-page')
+let currenDisplay = 8;
+// hien thi san pham nam haoc nu 
+const optionMen = document.querySelector('.option-men');
+const optionWoman = document.querySelector('.option-woman')
 
-
-
+// hien thij ta ca san pham 
 function renderProduct(container ,start, end) {
-  // const showProduct = products.slice(start, end);
-  const showProduct = products.filter((item) => {
-    return item.tags && item.tags.includes('noi bat')
-  }).slice(start,end)
+  const showProduct = products.slice(start, end);
   showProduct.forEach(item => {
     const divEl = document.createElement('div');
     divEl.classList.add('product-main');
@@ -135,7 +71,7 @@ function renderProduct(container ,start, end) {
     if (item.tags) {
       if (item.tags && item.tags.includes('sale 30%')) {
         saleHTML = `<div class="sale">sale 30%</div>`;
-      } else if (item.tags.includes('sale 40%')) {
+      } else if (item.tags && item.tags.includes('sale 40%')) {
         saleHTML = `<div class="sale">sale 40%</div>`;
       }
     }
@@ -148,18 +84,10 @@ function renderProduct(container ,start, end) {
       `
 
     }
-    // hien thi san pham noi  bat 
-    let outsantHTML ='' ;
-    if(item.tags && item.tags.includes('noi bat')){
-      outsantHTML=` <img src="${item.imageURL}" alt="${item.name}" />`
-    }
-    else{
-      return ;
-    }
     divEl.innerHTML = `
       <div class="img_hidden">
         <a href="" class="img_box">
-         ${outsantHTML}
+          <img src="${item.imageURL}" alt="${item.name}" />
           <div class="product_overlay"></div>
           ${saleHTML}
         </a>
@@ -173,15 +101,35 @@ function renderProduct(container ,start, end) {
     container.appendChild(divEl);
   });
 }
+// hien thi san pham trang product
+renderProduct(productMainShirtPage,0, currenDisplay);
 
 
-// hien thi san pham trang index 
-renderProduct(productMainShirt,0, currenDisplay)
+// hien thi san pham la khi click nu hoac nam 
+function renderProductList (container , list) {
 
-// renderProduct(currenDisplay, products.length);
 
+}
+
+
+
+// click remove mat nut hien thi them
 loadMoreBtn.addEventListener("click", () => {
-  renderProduct(productMainShirt,currenDisplay, products.length);
+  renderProduct(productMainShirtPage,currenDisplay, products.length);
   loadMoreBtn.classList.add('hidden')
-
 });
+
+// click option nam hien thi danh sach toan la  do nam
+// optionMen.addEventListener("click", () => {
+//   productMainShirtPage.innerHTML = ''; // xoá hết sản phẩm hiện tại
+//   const shirtMen = products.filter((item) => item.category.includes('Nam'));
+ 
+// });
+// optionWoman.addEventListener("click", () => {
+//   productMainShirtPage.innerHTML = '';
+//   const shirtWomen = products.filter((item) => item.category.includes('Nữ'));
+//   renderProduct(productMainShirtPage,shirtWomen,products.length)
+// });
+const menProducts = products.filter(p => p.category.includes("Nam"));
+
+console.log(menProducts);
