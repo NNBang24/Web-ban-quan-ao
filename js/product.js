@@ -168,6 +168,15 @@ selectDrop.addEventListener("change" , () =>{
   
 });
 
+// 
+const inputDrop = document.querySelector('.input-drop');
+inputDrop.addEventListener('input' ,() =>{
+    
+   const searchText = inputDrop.value.trim().toLowerCase();
+    const inputNameDrop = products.filter(item => item.name.toLowerCase().includes(searchText));
+    renderProductList(productMainShirtPage,inputNameDrop)
+})
+
 
 // click remove mat nut hien thi them
 loadMoreBtn.addEventListener("click", () => {
