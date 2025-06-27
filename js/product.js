@@ -56,9 +56,7 @@ closeInputFind.addEventListener('blur', () => {
 const loadMoreBtn = document.querySelector('#load-more-btn');
 const productMainShirtPage = document.querySelector('.product-shirt-main-page')
 let currenDisplay = 8;
-// hien thi san pham nam haoc nu 
-const optionMen = document.querySelector('.option-men');
-const optionWoman = document.querySelector('.option-woman')
+
 
 // hien thij ta ca san pham 
 function renderProduct(container ,start, end) {
@@ -104,13 +102,71 @@ function renderProduct(container ,start, end) {
 // hien thi san pham trang product
 renderProduct(productMainShirtPage,0, currenDisplay);
 
-
 // hien thi san pham la khi click nu hoac nam 
 function renderProductList (container , list) {
+  container.innerHTML = '';
+  list.forEach(item => {
+    const divEl = document.createElement('div');
+    divEl.classList.add('product-main');
+    // hien thi sale 
+    let saleHTML = '';
+    if (item.tags) {
+      if (item.tags && item.tags.includes('sale 30%')) {
+        saleHTML = `<div class="sale">sale 30%</div>`;
+      } else if (item.tags && item.tags.includes('sale 40%')) {
+        saleHTML = `<div class="sale">sale 40%</div>`;
+      }
+    }
+    // hien thi gia ca 
+    let priceHTML = ` <p>${item.price.toLocaleString('vi-VN')}đ</p>`
+    if(item.priceSale < item.price) {
+      priceHTML= `
+      <p>${item.priceSale.toLocaleString('vi-VN')}đ</p>
+      <p class="sale-m">${item.price.toLocaleString('vi-VN')}đ</p>
+      `
 
-
+    }
+    divEl.innerHTML = `
+      <div class="img_hidden">
+        <a href="" class="img_box">
+          <img src="${item.imageURL}" alt="${item.name}" />
+          <div class="product_overlay"></div>
+          ${saleHTML}
+        </a>
+      </div>
+      <a href="" class="product_name">${item.name}</a>
+      <div class="money_sale">
+        ${priceHTML}
+      </div>
+    `;
+    container.appendChild(divEl);
+  })
 }
 
+const selectDrop = document.querySelector('#select-drop')
+// clik change loc Nam va NU 
+selectDrop.addEventListener("change" , () =>{
+  const selectValue = selectDrop.value ;
+  if(selectValue === 'Nam') {
+    const shirtMen = products.filter(item => {
+     return item.category.includes('Nam')
+    })
+    renderProductList(productMainShirtPage,shirtMen);
+
+  }
+  else if(selectValue === 'Nu') {
+    const shirtWomen = products.filter(item => {
+      return item.category.includes('Nu')
+    })
+    renderProductList(productMainShirtPage,shirtWomen)
+  }
+  else{
+    renderProduct(productMainShirtPage,0,currenDisplay)
+  }
+  loadMoreBtn.classList.add('hidden');
+
+  
+});
 
 
 // click remove mat nut hien thi them
@@ -119,17 +175,3 @@ loadMoreBtn.addEventListener("click", () => {
   loadMoreBtn.classList.add('hidden')
 });
 
-// click option nam hien thi danh sach toan la  do nam
-// optionMen.addEventListener("click", () => {
-//   productMainShirtPage.innerHTML = ''; // xoá hết sản phẩm hiện tại
-//   const shirtMen = products.filter((item) => item.category.includes('Nam'));
- 
-// });
-// optionWoman.addEventListener("click", () => {
-//   productMainShirtPage.innerHTML = '';
-//   const shirtWomen = products.filter((item) => item.category.includes('Nữ'));
-//   renderProduct(productMainShirtPage,shirtWomen,products.length)
-// });
-const menProducts = products.filter(p => p.category.includes("Nam"));
-
-console.log(menProducts);
