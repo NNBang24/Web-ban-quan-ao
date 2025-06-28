@@ -47,69 +47,7 @@ closeInputFind.addEventListener('blur', () => {
   closeInputFind.classList.add('hidden')
 });
   
-// 
-// silde-show images 
 
-
-let currentIndex = 0;
-const imgElement = document.querySelector('.img-slideshow');
-function changeImage() {
-  currentIndex++;
-  if (currentIndex >= imagesList.length) {
-    currentIndex = 0
-  }
-  imgElement.src = imagesList[currentIndex];
-  const indexItems = document.querySelectorAll('.index-item')
-  indexItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add('active')
-    }
-    else {
-      item.classList.remove('active')
-    }
-  });
-}
-setInterval(changeImage, 3000);
-
-// click chuyeen tiep
-const navigationLeftButton = () => {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = imagesList.length - 1;
-  }
-  imgElement.src = imagesList[currentIndex];
-  const indexItems = document.querySelectorAll('.index-item')
-  indexItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add('active')
-    }
-    else {
-      item.classList.remove('active')
-    }
-  });
-
-}
-const navigationRightButton = () => {
-  currentIndex++;
-  if (currentIndex >= imagesList.length) {
-    currentIndex = 0;
-  }
-  imgElement.src = imagesList[currentIndex];
-  const indexItems = document.querySelectorAll('.index-item')
-  indexItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add('active')
-    }
-    else {
-      item.classList.remove('active')
-    }
-  });
-
-}
-const navigationLeft = document.querySelector('.navigation-left');
-navigationLeft.addEventListener('click', navigationLeftButton)
-const navigationRight = document.querySelector('.navigation-right');
-navigationRight.addEventListener('click', navigationRightButton)
 
 
 // hiển thị thêm sản phẩm 
@@ -125,7 +63,7 @@ let currenDisplay = 6;
 function renderProduct(container ,start, end) {
   // const showProduct = products.slice(start, end);
   const showProduct = products.filter((item) => {
-    return item.tags && item.tags.includes('noi bat')
+    return item.tags && item.tags.includes('sale')
   }).slice(start,end)
   showProduct.forEach(item => {
     const divEl = document.createElement('div');
@@ -150,7 +88,7 @@ function renderProduct(container ,start, end) {
     }
     // hien thi san pham noi  bat 
     let outsantHTML ='' ;
-    if(item.tags && item.tags.includes('noi bat')){
+    if(item.tags && item.tags.includes('sale')){
       outsantHTML=` <img src="${item.imageURL}" alt="${item.name}" />`
     }
     else{

@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
 
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/queries.css" />
 
     <title>Document</title>
 </head>
 
-<body>
+<body class="body-click">
     <section class="navigation-popup">
         <div class="img-banner-overlod-navigation"></div>
         <div class="side-navigation">
@@ -24,7 +24,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                 </div>
-                <a href="#" class="logo1"><img src="images/logo1.jpg" alt="logo"></a>
+                <a href="#" class="logo1"><img src="images/logo1.jpg" alt="logo" /></a>
             </div>
             <div class="side-top">
                 <ul class="menu_navigation">
@@ -40,13 +40,12 @@
                                         d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </button>
-                            <button class="navigation-up  ">
+                            <button class="navigation-up">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                                 </svg>
-
                             </button>
                         </div>
                         <ul class="menu-sub1">
@@ -55,9 +54,10 @@
                             <li><a href="#">Shirt Women</a></li>
                         </ul>
                     </li>
+                    <li><a href="products.html">Products</a></li>
                     <li><a href="#">Jacket</a></li>
                     <li><a href="#">Accessories</a></li>
-                    <li><a href="listSale.html">Sale List</a></li>
+                    <li><a href="#">Sale List</a></li>
                     <li><a href="#">About us</a></li>
                 </ul>
             </div>
@@ -77,8 +77,10 @@
     </section>
     <header>
         <section class="header">
-            <div class="header-main ">
-                <a href="index.html" class="logo"><img src="images/logo1.jpg" alt="logo"></a>
+            <div class="header-main">
+                <div class="logo">
+                    <a href="index.html" class="logoss"><img src="images/logo1.jpg" alt="logo" /></a>
+                </div>
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li class="menu-sub-sub">
@@ -91,13 +93,12 @@
                     </li>
                     <li><a href="#">Jacket</a></li>
                     <li><a href="#">Accessories</a></li>
-                    <li><a href="listSale.html">Sale List</a></li>
+                    <li><a href="#">Sale List</a></li>
                     <li><a href="#">About us</a></li>
                 </ul>
 
-
                 <div class="menu-app">
-                    <button class="open-popup ">
+                    <button class="open-popup">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -120,12 +121,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
-
                         </button>
                     </a>
                     <div class="input-button-find">
                         <!-- <div class="img-banner-overlod-input"></div> -->
-                        <input type="text" name="nhap" id="find" class="input-find hidden" placeholder="find shopping">
+                        <input type="text" name="nhap" id="find" class="input-find hidden"
+                            placeholder="find shopping" />
                         <button class="open-input">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
@@ -137,177 +138,46 @@
                         <!-- <input type="text" name="nhap" id="find" class="input-find" placeholder="find shopping"> -->
                     </div>
                 </div>
-
             </div>
         </section>
     </header>
-    <main class="main-product">
-        <section class="dropdown-product">
-            <div class="search-drop">
-                <input type="text" placeholder="Tìm kiếm sản phẩm" class="input-drop">
+    <main>
+        <section class="detail-main">
+            <div class="img-detail">
+                <img src="images/shirt2.jpg" alt="">
+                <div class="product_overlay_detail"></div>
             </div>
-            <div class="category-drop">
-                <select name="" id="select-drop">
-                    <option value="all">Tất cả sản phẩm</option>
-                    <option class="option-men" value="Nam">Nam</option>
-                    <option class="option-women" value="Nu">Nữ</option>
-                </select>
+            <div class="content-product">
+                <p class="name-detail">SHIRT MEN 1</p>
+                <p class="price-detail">300.000 VND</p>
+                <div class="size-detail-drop">
+                    <select name="" id="select-drop-size">
+                        <option value="S">Size S</option>
+                        <option value="M">Size M</option>
+                        <option value="L">Size L</option>
+                        <option value="XL">Size Xl</option>
+                    </select>
+                </div>
+                <p class="thanh-chan"></p>
+                <div class="input-detail-product">
+                    <label for="" class="content-sl">Số Lượng</label>
+                    <span class="span-detail">-</span>
+                    <input type="number" id="quantity-detail" name="quantity" min="1" value="1">
+                    <span class="span-detail">+</span>
+                </div>
+                <button class="button-detail">Add to cart</button>
+                <p class="thanh-chan"></p>
+                <div class="mo-to-product">
+                    <p class="mo-ta">Mô tả</p>
+                    <ul class="description-detail">
+                        <li>Ao so mi tay dai mau xam</li>
+                    </ul>
+                </div>
             </div>
         </section>
-        <section class="product-shirt">
-            <div class="product-shirt-main-page">
-        <!-- <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt1.jpg" alt="shirt1" />
-              <div class="product_overlay"></div>
-              <div class="sale">sale 30%</div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt men 1</a>
-          <div class="money_sale">
-            <p>500,000đ</p>
-            <p class="sale-m">700,000đđ</p>
-          </div>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt2.jpg" alt="shirt2" />
-              <div class="product_overlay"></div>
-              <div class="sale">sale 30%</div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt men 2</a>
-          <div class="money_sale">
-            <p>500,000đ</p>
-            <p class="sale-m">700,000đđ</p>
-          </div>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt3.jpg" alt="shirt3" />
-              <div class="product_overlay"></div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt men 3</a>
-          <p>700,000đ</p>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt4.jpg" alt="shirt4" />
-              <div class="product_overlay"></div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt men 4</a>
-          <p>700,000đ</p>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt5.jpg" alt="shirt1" />
-              <div class="product_overlay"></div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt women 5</a>
-          <p>300,000đ</p>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt6.jpg" alt="shirt2" />
-              <div class="product_overlay"></div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt woman 6</a>
-          <p>700,000đ</p>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt7.jpg" alt="shirt3" />
-              <div class="product_overlay"></div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt woman 7</a>
-          <p>700,000đ</p>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt8.jpg" alt="shirt4" />
-              <div class="product_overlay"></div>
-            </a>
-          </div>
-          <a href="" class="product_name">shirt woman 8</a>
-          <p>300,000đ</p>
-        </div>
-
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt9.jpg" alt="shirt1" />
-              <div class="product_overlay"></div>
-              <div class="sale">sale 40%</div>
-            </a>
-          </div>
-          <a href="" class="product_name">weater 9</a>
-          <div class="money_sale">
-            <p>400,000đ</p>
-            <p class="sale-m">700,000đđ</p>
-          </div>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt10.jpg" alt="shirt2" />
-              <div class="product_overlay"></div>
-              <div class="sale">sale 40%</div>
-            </a>
-          </div>
-          <a href="" class="product_name">weater 10</a>
-          <div class="money_sale">
-            <p>400,000đ</p>
-            <p class="sale-m">700,000đđ</p>
-          </div>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt11.jpg" alt="shirt3" />
-              <div class="product_overlay"></div>
-              <div class="sale">sale 40%</div>
-            </a>
-          </div>
-          <a href="" class="product_name">sweater 11</a>
-          <div class="money_sale">
-            <p>400,000đ</p>
-            <p class="sale-m">700,000đđ</p>
-          </div>
-        </div>
-        <div class="product-main">
-          <div class="img_hidden">
-            <a href="" class="img_box">
-              <img src="images/shirt12.jpg" alt="shirt4" />
-              <div class="product_overlay"></div>
-              <div class="sale">sale 40%</div>
-            </a>
-          </div>
-          <a href="" class="product_name">weater 12</a>
-          <div class="money_sale">
-            <p>400,000đ</p>
-            <p class="sale-m">700,000đđ</p>
-          </div> -->
-      </div>
-      <div class="load-more">
-        <button id="load-more-btn">Hiển thị thêm</button>
-      </div>
-      </div>
     </main>
     <footer>
-        <div class="bottom-menu-container ">
+        <div class="bottom-menu-container">
             <div class="bottom-menu-item">
                 <strong>D&G</strong>
                 <ul>
@@ -339,8 +209,7 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="js/product.js"></script>
+    <script type="module" src="js/listSale.js"></script>
 </body>
-
 
 </html>

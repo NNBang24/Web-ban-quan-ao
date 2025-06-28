@@ -7,7 +7,7 @@ const products = [
     priceSale: 500000,
     imageURL: "images/shirt1.jpg",
     category: "Nam",
-    tags: ["noi bat", "sale 30%"],
+    tags: ["noi bat", "sale 30%","sale"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const products = [
     priceSale: 500000,
     imageURL: "images/shirt2.jpg",
     category: "Nam",
-    tags: ["noi bat", "sale 30%"],
+    tags: ["noi bat", "sale 30%","sale"],
   },
   {
     id: 3,
@@ -78,7 +78,7 @@ const products = [
     priceSale: 400000,
     imageURL: "images/shirt9.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["noi bat", "sale 40%"],
+    tags: ["noi bat", "sale 40%","sale"],
   },
   {
     id: 10,
@@ -88,7 +88,7 @@ const products = [
     imageURL: "images/shirt10.jpg",
     category: ["Nam", 'Nu'],
     priceSale: 400000,
-    tags: ["sale 40%"],
+    tags: ["sale 40%","sale"],
   },
   {
     id: 11,
@@ -98,7 +98,7 @@ const products = [
     priceSale: 400000,
     imageURL: "images/shirt11.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["sale 40%"],
+    tags: ["sale 40%","sale"],
   },
   {
     id: 12,
@@ -108,7 +108,7 @@ const products = [
     priceSale: 400000,
     imageURL: "images/shirt12.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["sale 40%"],
+    tags: ["sale 40%","sale"],
   },
   {
     id: 13,
@@ -118,7 +118,7 @@ const products = [
     priceSale: 280000,
     imageURL: "images/shirt13.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["noi bat", "sale 30%"],
+    tags: ["noi bat", "sale 30%","sale"],
   },
   {
     id: 14,
@@ -128,7 +128,7 @@ const products = [
     priceSale: 400000,
     imageURL: "images/shirt14.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["noi bat", "sale 30%"],
+    tags: ["noi bat", "sale 30%","sale"],
   },
   {
     id: 15,
@@ -138,7 +138,7 @@ const products = [
     priceSale: 280000,
     imageURL: "images/shirt15.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["noi bat", "sale 30%"],
+    tags: ["noi bat", "sale 30%","sale"],
   },
   {
     id: 16,
@@ -166,7 +166,7 @@ const products = [
     priceSale: 400000,
     imageURL: "images/shirt18.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["sale 40%"],
+    tags: ["sale 40%","sale"],
   },
   {
     id: 19,
@@ -176,7 +176,7 @@ const products = [
     priceSale: 400000,
     imageURL: "images/shirt19.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["sale 40%"],
+    tags: ["sale 40%","sale"],
   },
   {
     id: 20,
@@ -186,7 +186,7 @@ const products = [
     priceSale: 400000,
     imageURL: "images/shirt20.jpg",
     category: ["Nam", 'Nu'],
-    tags: ["sale 40%"],
+    tags: ["sale 40%","sale"],
   },
 ];
 // 

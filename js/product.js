@@ -44,7 +44,8 @@ openInput.addEventListener("click", () => {
 const closeInputFind = document.querySelector('.input-find');
 
 closeInputFind.addEventListener('blur', () => {
-  closeInputFind.classList.add('hidden')
+  closeInputFind.classList.add('hidden');
+  closeInputFind.value ='';
 });
   
 
@@ -170,11 +171,17 @@ selectDrop.addEventListener("change" , () =>{
 
 // 
 const inputDrop = document.querySelector('.input-drop');
-inputDrop.addEventListener('input' ,() =>{
-    
+inputDrop.addEventListener('input' ,() =>{   
    const searchText = inputDrop.value.trim().toLowerCase();
     const inputNameDrop = products.filter(item => item.name.toLowerCase().includes(searchText));
     renderProductList(productMainShirtPage,inputNameDrop)
+})
+//
+const inputFind = document.querySelector('.input-find');
+inputFind.addEventListener('input' ,() =>{   
+   const searchText = inputFind.value.trim().toLowerCase();
+    const inputNameDrop = products.filter(item => item.name.toLowerCase().includes(searchText));
+    renderProductList(productMainShirtPage  ,inputNameDrop)
 })
 
 
