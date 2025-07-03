@@ -175,7 +175,11 @@ inputDrop.addEventListener('input' ,() =>{
    const searchText = inputDrop.value.trim().toLowerCase();
     const inputNameDrop = products.filter(item => item.name.toLowerCase().includes(searchText));
     renderProductList(productMainShirtPage,inputNameDrop)
+    loadMoreBtn.classList.add('hidden')
 })
+// inputDrop.addEventListener('blur', () => {
+//   inputDrop.value ='';
+// });
 //
 const inputFind = document.querySelector('.input-find');
 inputFind.addEventListener('input' ,() =>{   

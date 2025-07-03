@@ -681,8 +681,11 @@ footer {
 
 .content-sale {
   font-size: 5rem;
+  font-weight: 800;
   margin: 2rem;
-  color: red;
+  color: rgb(24, 21, 21);
+  display: flex;
+  align-items: center;
 }
 
 .product-shirt {
@@ -805,6 +808,13 @@ footer {
   width: 100%;
   margin: 2rem 0;
 }
+.thanh-chan-sale {
+  border-top: 2px solid #5c5858;
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  margin-left: 3rem;
+}
 .product_overlay_detail{
   position: absolute;
   background-color: rgba(0, 0, 0, 0.3);
@@ -818,4 +828,7 @@ footer {
 }
 .img-detail:hover .product_overlay_detail{
    opacity: 1;
+}
+.span-detail:hover{
+  cursor: pointer;
 }
