@@ -96,13 +96,13 @@ function renderProduct(container ,start, end) {
     }
     divEl.innerHTML = `
       <div class="img_hidden">
-        <a href="" class="img_box">
+        <a href="product-detail.html?id=${item.id}" class="img_box">
          ${outsantHTML}
           <div class="product_overlay"></div>
           ${saleHTML}
         </a>
       </div>
-      <a href="" class="product_name">${item.name}</a>
+      <a href="product-detail.html?id=${item.id}" class="product_name">${item.name}</a>
       <div class="money_sale">
         ${priceHTML}
       </div>
@@ -148,13 +148,13 @@ function renderProductList (container , list) {
     }
     divEl.innerHTML = `
       <div class="img_hidden">
-        <a href="" class="img_box">
+        <a href="product-detail.html?id=${item.id}" class="img_box">
           <img src="${item.imageURL}" alt="${item.name}" />
           <div class="product_overlay"></div>
           ${saleHTML}
         </a>
       </div>
-      <a href="" class="product_name">${item.name}</a>
+      <a href="product-detail.html?id=${item.id}"class="product_name">${item.name}</a>
       <div class="money_sale">
         ${priceHTML}
       </div>
