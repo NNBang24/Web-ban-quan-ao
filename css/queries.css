@@ -1,0 +1,303 @@
+@media (max-width: 1200px) {
+  .header-main {
+    max-width: 1100px;
+  }
+
+  .menu a {
+    font-size: 1.1;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    padding-left: 1rem;
+  }
+
+  .menu {
+    gap: 0.5rem;
+  }
+
+  .menu-app button {
+    width: 3.3rem;
+  }
+
+  .img-para img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .menu-shirt a {
+    font-size: 1.8rem;
+  }
+
+  .section_shirt {
+    max-width: 900px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .menu-shirt-sub a {
+    font-size: 1.3rem;
+  }
+
+  .product-shirt {
+    max-width: 900px;
+  }
+
+  .img_box .sale {
+    font-size: 1.2rem;
+  }
+
+  .product_name {
+    font-size: 1.2rem;
+  }
+
+  .product-main p {
+    font-size: 1.3rem;
+  }
+
+  .bottom-menu-container {
+    max-width: 900px;
+  }
+
+  .bottom-menu-container a {
+    font-size: 1.1rem;
+  }
+
+  .bottom-menu-container strong {
+    font-size: 1.3rem;
+  }
+
+  .bottom-menu-container li {
+    font-size: 1.1rem;
+  }
+
+  .slide-show {
+    width: 70rem;
+  }
+
+  .list-images img {
+    width: 70rem;
+  }
+}
+
+@media (max-width: 944px) {
+  .header-main {
+    max-width: 850px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 1rem;
+  }
+
+  .menu {
+    gap: 0.1rem;
+  }
+
+  .menu-app button {
+    width: 3.6rem;
+  }
+
+  .heading {
+    display: none;
+  }
+
+  .menu-shirt-sub a {
+    display: none;
+  }
+
+  .product-shirt {
+    max-width: 710px;
+  }
+
+  .product-shirt-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img_box .sale {
+    font-size: 1rem;
+  }
+
+  .product_name {
+    font-size: 1.2rem;
+  }
+
+  .product-main p {
+    font-size: 1.3rem;
+  }
+
+  .bottom-menu-container {
+    width: 710px;
+  }
+
+  .bottom-menu-container a {
+    font-size: 1rem;
+  }
+
+  .bottom-menu-container strong {
+    font-size: 1.2rem;
+  }
+
+  .bottom-menu-container li {
+    font-size: 1rem;
+  }
+   .slide-show {
+    width: 50rem;
+  }
+
+  .list-images img {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 704px) {
+  .header-main {
+    max-width: 650px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 1rem;
+  }
+
+  .menu {
+    gap: 0.1rem;
+  }
+
+  .menu-app button {
+    width: 3.6rem;
+  }
+
+  .heading {
+    display: none;
+  }
+
+  .menu-shirt-sub a {
+    display: none;
+  }
+
+  .product-shirt {
+    max-width: 600px;
+  }
+
+  .product-shirt-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img_box .sale {
+    font-size: 0.8rem;
+  }
+
+  .product_name {
+    font-size: 1.1rem;
+  }
+
+  .product-main p {
+    font-size: 1.2rem;
+  }
+
+  .bottom-menu-container {
+    width: 600px;
+  }
+
+  .bottom-menu-container a {
+    font-size: 0.8rem;
+  }
+
+  .bottom-menu-container strong {
+    font-size: 1.2rem;
+  }
+
+  .bottom-menu-container li {
+    font-size: 0.8rem;
+  }
+   .slide-show {
+    width: 40rem;
+  }
+
+  .list-images img {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 544px) {
+  .header-main {
+    max-width: 500px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 1rem;
+  }
+
+  .menu {
+    gap: 0.1rem;
+  }
+
+  .menu-app button {
+    width: 3.6rem;
+  }
+
+  .heading {
+    display: none;
+  }
+
+  .menu-shirt-sub a {
+    display: none;
+  }
+
+  .product-shirt {
+    max-width: 400px;
+  }
+
+  .product-shirt-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .img_box .sale {
+    font-size: 0.8rem;
+  }
+
+  .product_name {
+    font-size: 1.1rem;
+  }
+
+  .product-main p {
+    font-size: 1.2rem;
+  }
+
+  .bottom-menu-container {
+    width: 400px;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 500px;
+  }
+
+  .bottom-menu-container a {
+    font-size: 0.8rem;
+  }
+
+  .bottom-menu-container strong {
+    font-size: 1.2rem;
+  }
+
+  .bottom-menu-container li {
+    font-size: 0.8rem;
+  }
+}
