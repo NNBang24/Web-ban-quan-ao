@@ -1,0 +1,105 @@
+/* dang ky */
+.section-register{
+  width: 40rem; 
+  border: 2px solid;
+  margin: 10rem  auto 3rem auto;
+  border-radius: 1rem;
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2  );
+
+}
+.my-account{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40rem;
+  margin-bottom: 10rem;
+
+}
+.my-account a {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  text-decoration: underline;
+  align-items: center;
+  gap: 1rem;
+}
+.icon-my-account{
+  width: 4rem;
+  border: none;
+  background-color:#fff;
+
+}
+.form-register{
+  /* border: 2px solid;
+  margin-bottom: 3rem;
+  border-radius: 1rem; */
+  /* box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1); */
+
+}
+.form-register .div-input {
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  margin-top: 3rem;
+  margin-right: 4rem;
+}
+.form-register div label{
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+.form-register div input {
+  height: 4.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #5c5858;
+}
+.Button-register{
+  width: 20rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  background-color: #800e0e;
+  color: #fff;
+  border: none;
+  margin-bottom: 2rem;
+  opacity: 1;
+}
+.div-register{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.div-a-register{
+  font-size: 2.5rem;
+}
+.Button-register:hover{
+  opacity: 0.7;
+}
+.Button-register:active{
+  opacity: 1;
+}
+.form-register div .div-a-register {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  opacity: 1;
+
+}
+.form-register div .div-a-register:hover{
+  opacity: 0.7;
+}
+.form-register div .div-a-register:active{
+  opacity: 1;
+}
+.form-register p {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+}

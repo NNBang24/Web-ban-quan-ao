@@ -1,0 +1,81 @@
+@media (max-width :1200px) {}
+
+@media (max-width : 944px) {
+    .product-shirt-main-page {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width : 704px) {
+    .product-shirt-main-page {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-main {
+        width: 60rem;
+    }
+
+    .input-drop {
+        width: 15rem;
+        font-size: 1.2rem;
+    }
+
+    #select-drop {
+        width: 15rem;
+        font-size: 1.2rem;
+    }
+
+    #price-filter {
+        width: 15rem;
+        font-size: 1.2rem;
+    }
+
+    .price-giam {
+        width: 10rem;
+        font-size: 1.2rem;
+    }
+
+    .price-tang {
+        width: 10rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width : 544px) {
+    .product-shirt-main-page {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer {
+        height: auto;
+    }
+    .open-input{
+        display: none;
+    }
+    .button-cart-quantity {
+        display: none ;
+    }
+    .input-drop {
+        width: 12rem;
+        font-size: 1rem;
+    }
+
+    #select-drop {
+        width: 12rem;
+        font-size: 1rem;
+    }
+
+    #price-filter {
+        width: 12rem;
+        font-size: 0.9rem;
+    }
+
+    .price-giam {
+        width: 8rem;
+        font-size: 0.9rem;
+    }
+
+    .price-tang {
+        width: 8rem;
+        font-size: 0.9rem;
+    }
+}

@@ -2,18 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
 
-  <link rel="stylesheet" href="css/general.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/queries.css" />
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/shirt.css">
+  <link rel="stylesheet" href="css/queries.css">
+  <link rel="stylesheet" href="css/responsive.shirt.css">
+
 
   <title>Document</title>
 </head>
 
-<body class="body-click">
+<body>
   <section class="navigation-popup">
     <div class="img-banner-overlod-navigation"></div>
     <div class="side-navigation">
@@ -24,7 +27,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
         </div>
-        <a href="#" class="logo1"><img src="images/logo1.jpg" alt="logo" /></a>
+        <a href="#" class="logo1"><img src="images/logo1.jpg" alt="logo"></a>
       </div>
       <div class="side-top">
         <ul class="menu_navigation">
@@ -39,11 +42,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
               </button>
-              <button class="navigation-up">
+              <button class="navigation-up  ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                 </svg>
+
               </button>
             </div>
             <ul class="menu-sub1">
@@ -64,10 +68,8 @@
   </section>
   <header>
     <section class="header">
-      <div class="header-main">
-        <div class="logo">
-          <a href="index.html" class="logoss"><img src="images/logo1.jpg" alt="logo" /></a>
-        </div>
+      <div class="header-main ">
+        <a href="index.html" class="logo"><img src="images/logo1.jpg" alt="logo"></a>
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
           <li class="menu-sub-sub">
@@ -83,8 +85,9 @@
           <li><a href="#">About us</a></li>
         </ul>
 
+
         <div class="menu-app">
-          <button class="open-popup">
+          <button class="open-popup ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round"
@@ -109,11 +112,12 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
               </svg>
+
             </button>
           </a>
           <div class="input-button-find">
             <!-- <div class="img-banner-overlod-input"></div> -->
-            <input type="text" name="nhap" id="find" class="input-find hidden" placeholder="find shopping" />
+            <input type="text" name="nhap" id="find" class="input-find hidden" placeholder="find shopping">
             <button class="open-input">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
@@ -125,46 +129,17 @@
             <!-- <input type="text" name="nhap" id="find" class="input-find" placeholder="find shopping"> -->
           </div>
         </div>
+
       </div>
     </section>
   </header>
-  <main>
-    <section class="section_para">
-      <div class="img-para">
-        <img src="images/para1.jpg" alt="dai_dien" />
-      </div>
-    </section>
-    <section class="slide-show-images">
-      <div class="slide-show">
-        <div class="list-images">
-          <img class="img-slideshow" src="images/silde-show1.jpg" alt="silde-show1">
-          <!-- <img src="images/silde-show2.jpg" alt="">
-                  <img src="images/silde-show3.jpg" alt=""> -->
-
-          <div class="navigation-button">
-            <button class="navigation-left">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-            <button class="navigation-right">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
-          </div>
-          <div class="index-images">
-            <div class="index-item active"></div>
-            <div class="index-item "></div>
-            <div class="index-item "></div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <main class="main-product">
     <section class="product-shirt">
-      <div class="product-shirt-main">
+      <div class="content">
+        <p>SHIRT WOMAN </p>
+        <p class="thanh-chan"></p>
+      </div>
+      <div class="product-shirt-main-page">
         <!-- <div class="product-main">
           <div class="img_hidden">
             <a href="" class="img_box">
@@ -314,10 +289,9 @@
         <button id="load-more-btn">Hiển thị thêm</button>
       </div>
       </div>
-    </section>
   </main>
   <footer>
-    <div class="bottom-menu-container">
+    <div class="bottom-menu-container ">
       <div class="bottom-menu-item">
         <strong>D&G</strong>
         <ul>
@@ -349,7 +323,8 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="js/index.js"></script>
+  <script type="module" src="js/shirt_woman.js"></script>
 </body>
+
 
 </html>

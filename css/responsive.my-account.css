@@ -1,0 +1,33 @@
+@media (max-width : 1200px) {
+    .div-my-account {
+        width: 95rem;
+    }
+
+}
+
+@media (max-width : 944px) {
+    .div-my-account {
+        width: 70rem;
+    }
+}
+
+@media (max-width : 704px) {
+    .div-my-account {
+        width: 50rem;
+    }
+     .orders th, td {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width : 544px) {
+     .div-my-account {
+        width: 40rem;
+    }
+    .orders th, td {
+        font-size: 1.2rem;
+    }
+    footer{
+        height: auto;
+    }
+}

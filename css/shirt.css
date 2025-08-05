@@ -1,0 +1,106 @@
+.product-shirt-main-page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.dropdown-product {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main-product {
+    margin-top: 10rem;
+}
+
+.search-dorp {
+    padding-left: 2rem;
+}
+
+.input-drop {
+    width: 20rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
+
+#select-drop {
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
+
+.load-more {
+    text-align: center;
+    /* width: 10rem; */
+
+}
+
+.load-more button {
+    width: 20rem;
+    font-size: 1.7rem;
+    margin: 2rem;
+    height: 3rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 1rem;
+    color: #878787;
+    transition: color 0.3s ease, background-color 0.3 ease;
+}
+
+.load-more button:hover {
+    color: #000;
+    background-color: #f0f0f0;
+
+}
+
+.hidden {
+    display: none;
+}
+
+/*  */
+.dropdow-price {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.price-giam {
+    padding: 1rem;
+    background-color: #88828228;
+    border: 0.1rem solid;
+    border-radius: 1rem;
+}
+
+.price-tang {
+    padding: 1rem;
+    background-color: #88828228;
+    border: 0.1rem solid;
+    border-radius: 1rem;
+}
+
+#price-filter {
+    width: 18rem;
+    height: 4rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.thanh-chan {
+    border-top: 2px solid #5c5858;
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    margin-left: 3rem;
+}
+.content {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 2rem;
+    color: rgb(24, 21, 21);
+
+    align-items: center;
+}

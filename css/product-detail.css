@@ -1,0 +1,157 @@
+.detail-main {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1rem;
+  max-width: 114rem;
+  width: 100%;
+  margin: 10rem auto 10rem;
+  padding: 0 2rem;
+
+}
+
+.img-detail img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.img-detail:hover img {
+  transform: scale(1.1);
+}
+
+.img-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width:50rem;
+  max-height: 60rem;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.name-detail {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.price-detail {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#select-drop-size {
+  font-weight: 500;
+}
+
+.content-product {
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.mo-ta {
+  margin-top: 5rem;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.description-detail {
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.description-detail li::before {
+  content: "+ ";
+  color: #333;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+#quantity-detail {
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 5rem;
+  align-items: center;
+}
+
+.span-detail {
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.input-detail-product {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.content-sl {
+  margin-right: 5rem;
+  color: #878787;
+}
+
+.button-detail {
+  margin-top: 3rem;
+  width: 30rem;
+  height:4rem;
+  background-color: #000;
+  color: #eff4f8;
+  opacity: 1;
+}
+.button-detail:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+.prduct-tuong-tu {
+  width: 30rem;
+  margin: 0 auto;
+}
+.prduct-tuong-tu p {
+  display: flex;
+  justify-content: center;
+  color: #333;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.product-shirt-main-same {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem 3rem;
+  margin-bottom: 3rem;
+}
+.product-shirt-same {
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-bottom: 6.4rem;
+  margin-top: 6rem;
+}
+
+.product-shirt-same img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product_overlay_detail{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+.img-detail:hover .product_overlay_detail{
+   opacity: 1;
+}
+.span-detail:hover{
+  cursor: pointer;
+}

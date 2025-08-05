@@ -1,0 +1,49 @@
+@media (max-width: 1200px) {
+    .section-checkout {
+        width: 90rem;
+    }
+}
+
+@media (max-width: 944px) {
+    .section-checkout {
+        width: 100%;
+        max-width: 70rem;
+      
+        grid-template-columns: 1fr; /* chuyển về 1 cột */
+        
+    }
+
+    .form-checkout {
+        width: 100%; /* giúp chiếm full chiều ngang container */
+        max-width: 40rem; /* vẫn giữ kích thước đẹp mắt */
+        margin: 5rem auto;
+    }
+    .div-information {
+        width: 100%; /* giúp chiếm full chiều ngang container */
+        max-width: 40rem; /* vẫn giữ kích thước đẹp mắt */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 704px) {
+    .section-checkout {
+        width: 100%;
+        max-width: 50rem;
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 544px) {
+    .section-checkout {
+       max-width: 40rem;
+    }
+
+    .form-checkout {
+        max-width: 40rem;
+        /* padding: 1rem; */
+    }
+    footer {
+        height: auto;
+    }
+}

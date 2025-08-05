@@ -1,0 +1,60 @@
+@media (max-width : 1200px) {
+    .size-detail-drop{
+        margin-left: 0.2rem;
+    }
+}
+@media (max-width : 944px) {
+    .header-main{
+        max-width: 80rem;
+    }
+    .detail-main{
+        max-width: 80rem;
+    }
+    .product-shirt-main-same{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .product-shirt-same{
+        width: 80rem;
+    }
+    .name-detail{
+        font-size: 3rem;
+    }
+    .price-detail{
+        font-size: 2rem;
+    }
+    .size-detail-drop{
+        /* font-size: 0.5rem; */
+        margin-top: 1rem;
+    }
+    #select-drop-size {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width : 704px) {
+     .header-main{
+        max-width: 60rem;
+    }
+    .detail-main{
+        max-width: 65rem;
+    }
+    .product-shirt-same{
+        max-width: 60rem;
+    }
+}
+@media (max-width : 544px) {
+      .header-main{
+        max-width: 50rem;
+    }
+    .detail-main{
+        max-width: 50rem;
+    }
+    .product-shirt-same{
+        max-width: 50rem;
+    }
+    .detail-main{
+        grid-template-columns: 4fr;
+    }
+    footer {
+        height: auto;
+    }
+}
