@@ -53,10 +53,11 @@ let currenDisplay = 8;
 
 
 // hien thij ta ca san pham 
+const filterProducts = products.filter(item => {
+  return item.categoryName && item.categoryName.includes('SWEATER')
+})
 function renderProduct(container, start, end) {
-  const showProduct = products.filter(item => {
-    return item.categoryName && item.categoryName.includes('SWEATER')
-  }).slice(start, end);
+  const showProduct = filterProducts.slice(start, end)
   showProduct.forEach(item => {
     const divEl = document.createElement('div');
     divEl.classList.add('product-main');
@@ -94,12 +95,17 @@ function renderProduct(container, start, end) {
 
     container.appendChild(divEl);
   });
+  if (end >= filterProducts.length) {
+    loadMoreBtn.classList.add('hidden')
+  }
 }
 // hien thi san pham trang product
 renderProduct(productMainShirtPage, 0, currenDisplay);
 
 loadMoreBtn.addEventListener("click", () => {
-  renderProduct(productMainShirtPage, currenDisplay, products.length);
+  const prevDisplay = currenDisplay;
+  currenDisplay += 8
+  renderProduct(productMainShirtPage, prevDisplay, currenDisplay);
   loadMoreBtn.classList.add('hidden')
 });
 // dang xuat 

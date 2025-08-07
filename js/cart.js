@@ -181,6 +181,7 @@ else {
         updateCart[index].quantity = Number(quantityInput.value);
         localStorage.setItem('cart', JSON.stringify(updateCart));
         updatedTotalCart();
+           updateCartQuantityIcon();
       }
     });
 
@@ -190,6 +191,7 @@ else {
       updateCart[index].quantity = Number(quantityInput.value);
       localStorage.setItem('cart', JSON.stringify(updateCart));
       updatedTotalCart();
+         updateCartQuantityIcon();
     });
     quantityInput.addEventListener('change', () => {
       let newValue = Number(quantityInput.value);
@@ -197,12 +199,14 @@ else {
         updateCart[index].quantity = newValue;
         localStorage.setItem('cart', JSON.stringify(updateCart));
         updatedTotalCart();
+        updateCartQuantityIcon();
       }
       else {
         quantityInput.value =1 ;
         updateCart[index].quantity = 1;
         localStorage.setItem('cart', JSON.stringify(updateCart));
         updatedTotalCart();
+        updateCartQuantityIcon();
       }
     })
   });
@@ -324,7 +328,29 @@ if (currentUser && quantityElement) {
   if (quantityElement) {
     quantityElement.classList.add('hidden');
   }
+}// cap nhat hin thi icon khi click
+function updateCartQuantityIcon() {
+  const quantityElement = document.querySelector('.update-content-cart');
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'))
+
+  if (currentUser && quantityElement) {
+    const userCart = cart.filter(item => item.email === currentUser.email);
+    const totalQuantity = userCart.reduce((total, item) => total + Number(item.quantity), 0);
+
+    if (totalQuantity > 0) {
+      quantityElement.textContent = totalQuantity;
+      quantityElement.classList.remove('hidden');
+    } else {
+      quantityElement.classList.add('hidden');
+    }
+  } else {
+    if (quantityElement) {
+      quantityElement.classList.add('hidden');
+    }
+  }
 }
+
 
 // dang xuat 
 const spanLogOut = document.querySelector('.log-out');

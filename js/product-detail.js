@@ -123,10 +123,12 @@ spanPlus.addEventListener('click', () => {
 const sameProduct = products.filter(item => {
   return item.categoryName === productDetail.categoryName && Number(item.id) !== Number(productID);
 })
+console.log(sameProduct)
 //
 // so san pham se duoc suat hien vd nhu 3 san pham 
-const currentProduct = 3
+let currentProduct = 3
 const productShirtSame = document.querySelector('.product-shirt-main-same')
+const loadMoreBtn = document.querySelector('#load-more-btn');
 function renderProduct(continer, start, end) {
   const showProduct = sameProduct.slice(start, end);
   showProduct.forEach(item => {
@@ -167,13 +169,17 @@ function renderProduct(continer, start, end) {
     `
     continer.appendChild(divEl)
   })
+  if(end >= sameProduct.length) {
+    loadMoreBtn.classList.add('hidden');
+  }
 }
 renderProduct(productShirtSame, 0, currentProduct)
 // click hien xem the,
-const loadMoreBtn = document.querySelector('#load-more-btn');
 loadMoreBtn.addEventListener('click' ,() => {
-  renderProduct(productShirtSame,currentProduct,sameProduct.length)
-  loadMoreBtn.classList.add('hidden');
+  const prevDisplay = currentProduct ;
+  currentProduct +=3
+  renderProduct(productShirtSame,prevDisplay,currentProduct)
+  // loadMoreBtn.classList.add('hidden');
 })
 // khi mìn add to cart thi phải kiểm tra xem đã đăng nhập chưa , nếu chưa thì qua trang đăng nhâp j
 

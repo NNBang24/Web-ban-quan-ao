@@ -49,14 +49,14 @@ closeInputFind.addEventListener('blur', () => {
 
 const loadMoreBtn = document.querySelector('#load-more-btn');
 const productMainShirtPage = document.querySelector('.product-shirt-main-page')
-let currenDisplay = 8;
+let currenDisplay = 4;
 
-
+const filterProducts = products.filter(item => {
+   return item.categoryName && item.categoryName.includes('T SHIRT')
+})
 // hien thij ta ca san pham 
 function renderProduct(container, start, end) {
-  const showProduct = products.filter(item => {
-    return item.categoryName && item.categoryName.includes('T SHIRT')
-  }).slice(start, end);
+  const showProduct = filterProducts.slice(start,end)
   showProduct.forEach(item => {
     const divEl = document.createElement('div');
     divEl.classList.add('product-main');
@@ -94,13 +94,18 @@ function renderProduct(container, start, end) {
 
     container.appendChild(divEl);
   });
+  if(end >= filterProducts.length) {
+    loadMoreBtn.classList.add('hidden')
+  }
 }
 // hien thi san pham trang product
 renderProduct(productMainShirtPage, 0, currenDisplay);
 
 loadMoreBtn.addEventListener("click", () => {
-  renderProduct(productMainShirtPage, currenDisplay, products.length);
-  loadMoreBtn.classList.add('hidden')
+  const prevDisplay = currenDisplay ;
+  currenDisplay += 4
+  renderProduct(productMainShirtPage, prevDisplay, currenDisplay);
+ loadMoreBtn.classList.add('hidden')
 });
 // dang xuat 
 const spanLogOut = document.querySelector('.log-out');
