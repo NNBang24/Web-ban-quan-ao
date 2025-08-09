@@ -104,3 +104,16 @@
 
     align-items: center;
 }
+.dont_find{
+    font-size: 2.5rem;
+    font-weight:800 ;
+
+}
+.div-find-pr{
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 4rem;
+    font-weight: 800;
+}

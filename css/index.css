@@ -29,7 +29,8 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  /* height: 7rem; */
+  width: 100%;
+ 
 }
 
 .header {
@@ -124,8 +125,10 @@
 
 .img-para img {
   width: 100%;
+  /* width: 110rem; */
   object-fit: cover;
   display: flex;
+  /* margin-top: 10rem; */
 }
 
 .section_shirt {
@@ -282,7 +285,8 @@
 /* footer */
 .bottom-menu-container {
   display: flex;
-  width: 130rem;
+  width: 100%;
+  max-width: 110rem;
   margin: 0 auto 40px auto;
 }
 

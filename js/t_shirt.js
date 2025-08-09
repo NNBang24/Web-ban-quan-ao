@@ -46,11 +46,14 @@ closeInputFind.addEventListener('blur', () => {
   closeInputFind.classList.add('hidden');
   closeInputFind.value = '';
 });
-
+const currentUser = localStorage.getItem('currentUser');
+const pareUser = JSON.parse(currentUser)
 const loadMoreBtn = document.querySelector('#load-more-btn');
 const productMainShirtPage = document.querySelector('.product-shirt-main-page')
 let currenDisplay = 4;
 
+
+// hien thij ta ca san pham 
 const filterProducts = products.filter(item => {
    return item.categoryName && item.categoryName.includes('T SHIRT')
 })
@@ -99,6 +102,7 @@ function renderProduct(container, start, end) {
   }
 }
 // hien thi san pham trang product
+
 renderProduct(productMainShirtPage, 0, currenDisplay);
 
 loadMoreBtn.addEventListener("click", () => {
@@ -106,6 +110,61 @@ loadMoreBtn.addEventListener("click", () => {
   currenDisplay += 4
   renderProduct(productMainShirtPage, prevDisplay, currenDisplay);
  loadMoreBtn.classList.add('hidden')
+});
+// hien thi tiem kiem 
+function renderProductList(container, list) {
+  container.innerHTML = '';
+  list.forEach(item => {
+    const divEl = document.createElement('div');
+    divEl.classList.add('product-main');
+    // hien thi sale 
+    let saleHTML = '';
+    if (item.tags) {
+      if (item.tags && item.tags.includes('sale 30%')) {
+        saleHTML = `<div class="sale">sale 30%</div>`;
+      } else if (item.tags && item.tags.includes('sale 40%')) {
+        saleHTML = `<div class="sale">sale 40%</div>`;
+      }
+    }
+    // hien thi gia ca 
+    let priceHTML = ` <p>${item.price.toLocaleString('vi-VN')}đ</p>`
+    if (item.priceSale < item.price) {
+      priceHTML = `
+      <p>${item.priceSale.toLocaleString('vi-VN')}đ</p>
+      <p class="sale-m">${item.price.toLocaleString('vi-VN')}đ</p>
+      `
+
+    }
+    divEl.innerHTML = `
+      <div class="img_hidden">
+        <a href="product-detail.html?id=${item.id}" class="img_box">
+          <img src="${item.imageURL}" alt="${item.name}" />
+          <div class="product_overlay"></div>
+          ${saleHTML}
+        </a>
+      </div>
+      <a href="product-detail.html?id=${item.id}" class="product_name">${item.name}</a>
+      <div class="money_sale">
+        ${priceHTML}
+      </div>
+    `;
+    container.appendChild(divEl);
+  })
+}
+const inputFind = document.querySelector('.input-find');
+inputFind.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const searchText = inputFind.value.trim().toLowerCase();
+    if (searchText !== '') {
+      localStorage.setItem('searchKey', searchText); // lưu từ khóa
+      window.location.href = 'find_product.html';      // chuyển trang
+    }
+  }
+});
+
+loadMoreBtn.addEventListener("click", () => {
+  renderProduct(productMainShirtPage, currenDisplay, products.length);
+  loadMoreBtn.classList.add('hidden')
 });
 // dang xuat 
 const spanLogOut = document.querySelector('.log-out');
@@ -117,3 +176,13 @@ spanLogOut.addEventListener('click', () => {
     window.location.href = 'index.html';
   }
 });
+// chuyen account
+const buttonMyAccount = document.querySelector('.btn-my-account');
+buttonMyAccount.addEventListener('click' ,() => {
+  if(pareUser) {
+    window.location.href ='my-account.html'
+  }
+  else {
+    window.location.href = 'register.html'
+  }
+})

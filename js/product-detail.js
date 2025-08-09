@@ -63,8 +63,8 @@ if (productDetail) {
     return `<option value="${item}">Size ${item}</option>`
   })
   let priceHTML = `<p class="price-detail">${productDetail.price.toLocaleString('vi-VN')} VND</p>`;
-  if (productDetail.priceSale < productDetail.price ) {
-    priceHTML = `<p class="price-detail">${productDetail.priceSale  .toLocaleString('vi-VN')} VND</p>`;
+  if (productDetail.priceSale < productDetail.price) {
+    priceHTML = `<p class="price-detail">${productDetail.priceSale.toLocaleString('vi-VN')} VND</p>`;
   }
 
   detailMain.innerHTML = `
@@ -107,23 +107,22 @@ const quantityDetail = document.getElementById('quantity-detail')
 
 // tru san pham
 spanMinus.addEventListener('click', () => {
-  let current = Number(quantityDetail.value) || 1 ;
-  if(current > 1) {
-    quantityDetail.value = current - 1 ;
+  let current = Number(quantityDetail.value) || 1;
+  if (current > 1) {
+    quantityDetail.value = current - 1;
   }
- })
+})
 
 // cong them san pham 
 spanPlus.addEventListener('click', () => {
-  let current = Number(quantityDetail.value) || 1 ;
-  quantityDetail.value = current+ 1
+  let current = Number(quantityDetail.value) || 1;
+  quantityDetail.value = current + 1
 })
 
 // lay nhung san pham tuong tu va khong lay san pham da vo trang chi tiet 
 const sameProduct = products.filter(item => {
   return item.categoryName === productDetail.categoryName && Number(item.id) !== Number(productID);
 })
-console.log(sameProduct)
 //
 // so san pham se duoc suat hien vd nhu 3 san pham 
 let currentProduct = 3
@@ -169,17 +168,16 @@ function renderProduct(continer, start, end) {
     `
     continer.appendChild(divEl)
   })
-  if(end >= sameProduct.length) {
+  if (end >= sameProduct.length) {
     loadMoreBtn.classList.add('hidden');
   }
 }
 renderProduct(productShirtSame, 0, currentProduct)
 // click hien xem the,
-loadMoreBtn.addEventListener('click' ,() => {
-  const prevDisplay = currentProduct ;
-  currentProduct +=3
-  renderProduct(productShirtSame,prevDisplay,currentProduct)
-  // loadMoreBtn.classList.add('hidden');
+loadMoreBtn.addEventListener('click', () => {
+  const prevDisplay = currentProduct;
+  currentProduct += 3
+  renderProduct(productShirtSame, prevDisplay, currentProduct)
 })
 // khi mìn add to cart thi phải kiểm tra xem đã đăng nhập chưa , nếu chưa thì qua trang đăng nhâp j
 
@@ -188,16 +186,16 @@ addToCart.addEventListener('click', () => {
   // const user = localStorage.getItem('user')
   // const userParse = JSON.parse(user);
   const currentUser = localStorage.getItem('currentUser');
-  const parseUser =JSON.parse(currentUser)
+  const parseUser = JSON.parse(currentUser)
 
-  if( !parseUser) {
+  if (!parseUser) {
     alert('Đăng nhập trước khi thêm vào giỏ hàng')
     window.location.href = 'login.html'
-    return ;
-  } 
+    return;
+  }
 
 
-  
+
   const name = document.querySelector('.name-detail').textContent;
   const price = document.querySelector('.price-detail').textContent;
   const dropSizes = document.getElementById('select-drop-size').value;
@@ -220,11 +218,11 @@ addToCart.addEventListener('click', () => {
     sizes: dropSizes,
     quantity,
     img,
-    email : parseUser.email
+    email: parseUser.email
   }
   const cartIndex = cart.find(item => {
-  return item.id === id && item.sizes == dropSizes && item.email === parseUser.email;
-});
+    return item.id === id && item.sizes == dropSizes && item.email === parseUser.email;
+  });
 
   if (cartIndex) {
     cartIndex.quantity += quantity;
@@ -236,16 +234,16 @@ addToCart.addEventListener('click', () => {
   localStorage.setItem('cart', JSON.stringify(cart));
 
   alert('Thêm giỏ hàng thành công')
-  window.location.href ='cart.html'
+  window.location.href = 'cart.html'
 })
 //
 // hien co bao nhieu san pham tren icon gio hang 
 const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+const currentUser = JSON.parse(localStorage.getItem('currentUser')) || [];
 const quantityElement = document.querySelector('.update-content-cart');
 
 if (currentUser && quantityElement) {
-  const totalQuantity = cartItems.reduce((total, item) => total + Number(item.quantity  ), 0);
+  const totalQuantity = cartItems.reduce((total, item) => total + Number(item.quantity), 0);
 
   if (totalQuantity > 0) {
     quantityElement.textContent = totalQuantity;
@@ -267,5 +265,26 @@ spanLogOut.addEventListener('click', () => {
   if (result) {
     localStorage.removeItem('currentUser');
     window.location.href = 'index.html';
+  }
+});
+// chuyen account
+
+const buttonMyAccount = document.querySelector('.btn-my-account');
+buttonMyAccount.addEventListener('click', () => {
+  if (currentUser) {
+    window.location.href = 'my-account.html'
+  }
+  else {
+    window.location.href = 'register.html'
+  }
+})
+const inputFind = document.querySelector('.input-find');
+inputFind.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const searchText = inputFind.value.trim().toLowerCase();
+    if (searchText !== '') {
+      localStorage.setItem('searchKey', searchText); // lưu từ khóa
+      window.location.href = 'find_product.html';      // chuyển trang
+    }
   }
 });

@@ -181,7 +181,7 @@ else {
         updateCart[index].quantity = Number(quantityInput.value);
         localStorage.setItem('cart', JSON.stringify(updateCart));
         updatedTotalCart();
-           updateCartQuantityIcon();
+        updateCartQuantityIcon();
       }
     });
 
@@ -191,7 +191,7 @@ else {
       updateCart[index].quantity = Number(quantityInput.value);
       localStorage.setItem('cart', JSON.stringify(updateCart));
       updatedTotalCart();
-         updateCartQuantityIcon();
+      updateCartQuantityIcon();
     });
     quantityInput.addEventListener('change', () => {
       let newValue = Number(quantityInput.value);
@@ -328,7 +328,8 @@ if (currentUser && quantityElement) {
   if (quantityElement) {
     quantityElement.classList.add('hidden');
   }
-}// cap nhat hin thi icon khi click
+}
+// cap nhat hin thi icon khi click
 function updateCartQuantityIcon() {
   const quantityElement = document.querySelector('.update-content-cart');
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -351,7 +352,6 @@ function updateCartQuantityIcon() {
   }
 }
 
-
 // dang xuat 
 const spanLogOut = document.querySelector('.log-out');
 
@@ -360,5 +360,25 @@ spanLogOut.addEventListener('click', () => {
   if (result) {
     localStorage.removeItem('currentUser');
     window.location.href = 'index.html';
+  }
+});
+// chuyen account
+const buttonMyAccount = document.querySelector('.btn-my-account');
+buttonMyAccount.addEventListener('click' ,() => {
+  if(pareUser) {
+    window.location.href ='my-account.html'
+  }
+  else {
+    window.location.href = 'register.html'
+  }
+})
+const inputFind = document.querySelector('.input-find');
+inputFind.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const searchText = inputFind.value.trim().toLowerCase();
+    if (searchText !== '') {
+      localStorage.setItem('searchKey', searchText); // lưu từ khóa
+      window.location.href = 'find_product.html';      // chuyển trang
+    }
   }
 });

@@ -1,11 +1,13 @@
-.section-account{
+.section-account {
     margin-top: 10rem;
 }
-.h2-account{
+
+.h2-account {
     display: flex;
     justify-content: center;
 }
-.div-my-account{
+
+.div-my-account {
     display: grid;
     width: 110rem;
     margin: 0px auto;
@@ -13,46 +15,73 @@
     margin-bottom: 5rem;
     gap: 1rem;
 }
-.info{
+
+.info {
     flex: 1;
     /* border: 1px solid; */
 
 }
+
 .info h3 {
     display: flex;
     justify-content: center;
 }
-.content-info{
+
+.content-info {
     margin-left: 3rem;
 }
+
 .orders {
     flex: 1;
-    border: 1px solid;  
+    border: 1px solid;
     padding: 1rem;
     border-radius: 1rem;
 }
-.orders h3{
+
+.orders h3 {
     display: flex;
     justify-content: center;
 }
+
 .orders table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
 }
 
-.orders th, td {
-  padding:1rem;
-  border: 1px solid #ccc;
-  word-break: break-word; /* Giúp ngắt dòng nếu nội dung quá dài */
+.orders th,
+td {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    word-break: break-word;
+    /* Giúp ngắt dòng nếu nội dung quá dài */
 }
-.delete-account{
-  width: 10rem;
-  height: 4rem;
-  border-radius: 0.5rem;
-  font-size: 1.8rem;
-  background-color: #800e0e;
-  color: #fff;
-  border: none;
-  margin-top: 3rem;
+
+.delete-account {
+    width: 10rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    background-color: #800e0e;
+    color: #fff;
+    border: none;
+    margin-top: 3rem;
+}
+
+.div-user-mail {
+  border: 1px solid;
+  border-radius: 1rem;
+  width: 35rem;
+  margin: 0 auto;
+  padding: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.div-user-mail p {
+  padding-top: 1rem;
+}
+
+.div-user-mail span {
+  word-break: break-all; 
 }

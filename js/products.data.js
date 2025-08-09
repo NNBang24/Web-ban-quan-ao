@@ -88,7 +88,7 @@ const products = [
   },
   {
     id: 9,
-    name: "WEATER 1",
+    name: "SWEATER 1",
     categoryName: "SWEATER",
     description: "Ao Weater 3 mau ",
     price: 700000,
@@ -100,7 +100,7 @@ const products = [
   },
   {
     id: 10,
-    name: "WEATER 2",
+    name: "SWEATER 2",
     categoryName: "SWEATER",
     description: "Ao Weater mau den ",
     price: 700000,
@@ -112,7 +112,7 @@ const products = [
   },
   {
     id: 11,
-    name: "WEATER 3",
+    name: "SWEATER 3",
     categoryName: "SWEATER",
     description: "Ao Weater mau do ",
     price: 700000,
@@ -124,7 +124,7 @@ const products = [
   },
   {
     id: 12,
-    name: "WEATER 4",
+    name: "SWEATER 4",
     categoryName: "SWEATER",
     description: "Ao Weater mau be ",
     price: 700000,

@@ -111,3 +111,23 @@ spanLogOut.addEventListener('click', () => {
     window.location.href = 'index.html';
   }
 });
+// chuyen account
+const buttonMyAccount = document.querySelector('.btn-my-account');
+buttonMyAccount.addEventListener('click' ,() => {
+  if(currentUserParse) {
+    window.location.href ='my-account.html'
+  }
+  else {
+    window.location.href = 'register.html'
+  }
+})
+const inputFind = document.querySelector('.input-find');
+inputFind.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const searchText = inputFind.value.trim().toLowerCase();
+    if (searchText !== '') {
+      localStorage.setItem('searchKey', searchText); // lưu từ khóa
+      window.location.href = 'find_product.html';      // chuyển trang
+    }
+  }
+});
